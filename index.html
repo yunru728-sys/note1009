@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Notice</title>
+    <style>
+
+        /* 1. 基本設定 */
+        body {
+            /* 移除預設邊距 */
+            margin: 0;
+            /* 設定字體 */
+            font-family: Noto Sans TC;
+        }
+
+        .container {
+            /* 設定背景色 */
+            background-color: #f7f3ec;
+            /* 防止文字被選取 */
+            user-select: none;
+
+            /* 讓內容佔滿整個視窗 */
+            height: 100vh;
+
+            /* 垂直排列內容 */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* 2. 標題圖片 */
+        .title {
+            /* 圖片寬度 */
+            width: 60%;
+            max-width: 300px;
+            height: auto;
+        }
+
+        .content-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: min(90%, 900px);
+            gap: 2em;
+        }
+
+        /* 3. 圖片 */
+        .logo-img {
+            /* 填滿剩餘空間 */
+            flex: 1;
+
+            /* 寬度設定 */
+            width: 100%;
+            max-width: 800px;
+
+            /* 背景圖片設定 */
+            background-position: bottom;
+            background-size: contain;
+            background-repeat: no-repeat;
+
+            /* 文字位置 */
+            text-align:right;
+            /* 文字樣式 */
+            color: rgb(95, 92, 92);
+            font-size: 20px;
+            font-weight: 500;
+            -webkit-text-stroke: 1px rgb(12, 11, 11);
+
+        }
+        
+        .text {
+             /* 文字位置 */
+            text-align:left;
+            flex: 2;
+            /* 文字樣式 */
+            color: rgb(95, 92, 92);
+            font-size: 25px;
+            font-weight: 500;
+            -webkit-text-stroke: 1px rgb(12, 11, 11);
+        }
+
+        .return-button-container {
+            /* 讓按鈕固定在畫面下方並置中 */
+            position: fixed;
+            left: 50%;
+            bottom: 60px;
+            transform: translateX(-50%);
+        }
+
+        .return-button {
+            /* 按鈕樣式 */
+            padding: 1em 2em;
+            background-color: #e3dfd9;
+            border: none;
+            border-radius: 5px;
+            color: rgb(62, 1, 1);
+            font-size: 20px;
+            font-weight: 500;
+            cursor: pointer;
+
+            /* 過渡效果 */
+            transition: background-color 0.3s ease;
+        }
+        .notice {
+            /* 置頂並填滿整個畫面寬度 */
+            width: 100%;
+            height: 20%;
+            margin: 0;
+            padding: 0.8em 0;
+            text-align: center;
+            box-sizing: border-box;
+
+            /* 文字樣式 */
+            color: rgb(235, 224, 224);
+            font-size: 50px;
+            font-weight: 700;
+            -webkit-text-stroke: 0.2px rgb(46, 2, 2);
+
+            background-color: #34060c;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1 class="notice">Notice</h1>
+    <div class="content-row">
+        <img class="title" src="imgs/images.png" alt="logo-img">
+        <div class="text">Oops!!!!<br><br>This page isn't working right now. <br>Keep practing and working, then try it again later!</div>
+    </div>
+</div>
+
+<div class="return-button-container">
+    <button class="return-button" onclick="window.location.href='index.html'">Return to Home</button>
+
+
+</div>
+
+
+</body>
+</html>
