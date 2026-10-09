@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Notice</title>
+    <title>Steve Weiss Percussion Notice</title>
     <style>
 
         /* 1. 基本設定 */
@@ -106,16 +106,39 @@
             height: 20%;
             margin: 0;
             padding: 0.8em 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
             text-align: center;
             box-sizing: border-box;
 
             /* 文字樣式 */
             color: rgb(235, 224, 224);
-            font-size: 50px;
+            font-size: 30px;
             font-weight: 700;
             -webkit-text-stroke: 0.2px rgb(46, 2, 2);
 
             background-color: #34060c;
+        }
+
+        .notice-brand {
+            width: 180px;
+            height: auto;
+            flex: 0 1 180px;
+        
+        }
+
+        @media (max-width: 600px) {
+            .notice {
+                gap: 14px;
+                font-size: 22px;
+            }
+
+            .notice-brand {
+                width: 110px;
+                flex-basis: 110px;
+            }
         }
         
     </style>
@@ -124,9 +147,12 @@
 <body>
 
 <div class="container">
-    <h1 class="notice" src="imgs/logo2.svg">Notice</h1>
+    <h1 class="notice">
+        <img class="notice-brand" src="imgs/logo2.svg" alt="Steve Weiss Percussion">
+        <span>Steve Weiss Percussion<br>Notice</span>
+    </h1>
     <div class="content-row">
-        <img class="title" src="imgs/images.png" alt="logo-img">
+        <img class="title" src="imgs/images2.png" alt="logo-img">
         <div class="text">Oops!!!!<br><br>This page isn't working right now. <br>Keep practing and working, then try it again later!</div>
     </div>
 </div>
